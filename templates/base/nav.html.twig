@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <a class="navbar-brand" href="{{ path('home') }}">
+    <img class="nav-item nav-link logo" src="{{ asset('build/images/parallax.png') }}">
+  </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse text-center" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ path('home') }}">ACCUEIL</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{{ path('automobile') }}">AUTOMOBILE</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{{ path('espace') }}">ESPACE</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{{ path('science') }}">SCIENCE</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{{ path('technologie') }}">TECHNOLOGIE</a>
+      <li class="nav-item">
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{{ path('apropos') }}">À PROPOS</a>
+      </li>
+
+    </ul>
+
+  </div>
+
+</nav>
