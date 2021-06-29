@@ -2,19 +2,23 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Repository\ScienceRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ScienceController extends AbstractController
 {
     /**
      * @Route("/science", name="science")
      */
-    public function index(): Response
+
+    public function index(ScienceRepository $scienceRepo): Response
     {
-        return $this->render('science/index.html.twig', [
-            'controller_name' => 'ScienceController',
+        $science = $scienceRepo->findAll();
+
+        return $this->render('science/science.html.twig', [
+            'science' => $science,
         ]);
     }
 }

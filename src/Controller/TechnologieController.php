@@ -2,19 +2,23 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Repository\TechnologieRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class TechnologieController extends AbstractController
 {
     /**
      * @Route("/technologie", name="technologie")
      */
-    public function index(): Response
+
+    public function index(TechnologieRepository $technologieRepo): Response
     {
-        return $this->render('technologie/index.html.twig', [
-            'controller_name' => 'TechnologieController',
+        $technologie = $technologieRepo->findAll();
+
+        return $this->render('technologie/technologie.html.twig', [
+            'technologie' => $technologie,
         ]);
     }
 }

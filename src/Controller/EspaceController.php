@@ -2,19 +2,23 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Repository\EspaceRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class EspaceController extends AbstractController
 {
     /**
      * @Route("/espace", name="espace")
      */
-    public function index(): Response
+
+    public function index(EspaceRepository $espaceRepo): Response
     {
-        return $this->render('espace/index.html.twig', [
-            'controller_name' => 'EspaceController',
+        $espace = $espaceRepo->findAll();
+
+        return $this->render('espace/espace.html.twig', [
+            'espace' => $espace,
         ]);
     }
 }
