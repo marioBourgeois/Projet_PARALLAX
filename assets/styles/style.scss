@@ -1,0 +1,209 @@
+/* GLOBAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #9c968b;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+h2 {
+  margin-top: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color: #292929;
+  color: white;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+}
+
+h3 {
+  padding-top: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color:#292929;
+  color: white;
+}
+
+p {
+  font-size: 0.8em;
+}
+
+li {
+  text-align: center;
+}
+
+a {
+  color: #000000;
+}
+
+a:hover {
+  color: #2962ff;
+}
+
+hr {
+  color: #000000;
+}
+
+.container-fluid {
+  margin-bottom: 10px;
+}
+
+/* FIN GLOBAL */
+
+/* NAVBAR */
+
+.logo {
+  height: 60px;
+  padding-left: 10px;
+  margin-right: 20px;
+}
+
+.nav-link {
+  font-size: 20px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(0, 0, 0);
+}
+
+/* FIN NAVBAR */
+
+/* FOOTER */
+
+footer {
+  background-color: #f8f9fa !important;
+  margin: 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.logo2 {
+  height: 35px;
+  margin-top: 10px;
+}
+
+.image-footer {
+  height: 50px;
+}
+
+.citation {
+  font-weight: bolder;
+  font-size: 20px;
+}
+.auteur {
+  font-style: italic;
+  font-size: 12px;
+}
+
+.droit-auteur {
+  font-size: 15px;
+  font-style: italic;
+}
+
+.contact {
+  font-size: 20px;
+}
+
+/* FIN FOOTER */
+
+/* PAGE ACTUALITE */
+
+.a_la_une {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.date {
+  float: right;
+  font-size: 0.8em;
+}
+
+.categorie {
+  float: right;
+  margin-right: 10px;
+}
+
+.credit {font-size: 0.8em;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* FIN PAGE ACTUALITE */
+
+/* PAGE AUTOMOBILE */
+
+.automobile { margin-top: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color: #9c0505;
+  color: white;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+}
+
+.automobile-titre {
+  padding-top: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color: #9c0505;
+  color: white;
+}
+
+.article{
+  font-size: 1em;
+}
+/* FIN PAGE AUTOMOBILE */
+
+/* PAGE ESPACE */
+
+.espace-titre {
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color: #0143da;
+  color: white;
+}
+
+/* FIN PAGE ESPACE */
+
+/* PAGE SCIENCE */
+
+.science-titre {
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color:#08b138;
+  color: white;
+}
+
+/* FIN PAGE SCIENCE */
+
+/* PAGE TECHNOLOGIE */
+
+.technologie-titre {
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color:#e6770f;
+  color: white;
+}
+
+/* FIN PAGE TECHNOLOGIE */
