@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} ACUUEIL {% endblock %}
+
+{% block body %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-8">
+
+            {# GLOBAL #}
+            <h2>GLOBAL</h2>
+            <h3>PROJET PARALLAX</h3>
+            <div class="row align-items-center">
+                <div class="col-12">
+                    <img src="{{ asset('build/images/parallax1.jpg') }}" alt="Logo PARALLAX" />
+                    <span class="credit">Crédit: C£L</span>
+                </div>
+                <div class="col-12">
+                    Le Projet PARALLAX est un blog-actu créer pour le project final de ma formation Développeur web et
+                    web
+                    mobile.
+                </div>
+
+            </div>
+            <div class="date"> Publié le 28/06/2021 à 16h00</div>
+            <hr>
+
+            <h3>PROJET PARALLAX</h3>
+            <div class="row">
+                <div class="col-12">
+                    <img class="img-fluid"src="{{ asset('build/images/codage.jpg') }}" alt="Codage" />
+                   <br> <span class="credit">Crédit: Digi Activity</span>
+                </div>
+                <div class="col-12">
+                    Le Projet PARALLAX est un blog-actu créer pour le project final de ma formation Développeur web et
+                    web
+                    mobile.
+                </div>
+            </div>
+            <div class="date"> Publié le 28/06/2021 à 16h00</div>
+            <hr>
+        </div>
+
+
+
+        {# À LA UNE #}
+        <div class="col-12 col-md-4">
+
+            <h2>À LA UNE</h2>
+            <div class="a_la_une">
+                <h3>LA BUGATTI CHIRON SUPER SPORT: SEULEMENT 30 EXEMPLAIRES</h3>
+                <div class="row ">
+                    <div class="col-12">
+                        <img src="{{ asset('build/images/bugatti-chiron.webp') }}" alt="Bugatti Chiron Super Sport" />
+                        <span class="credit">Crédit: Turbo.fr</span>
+                    </div>
+                    <div class="col-12">
+                        <p class="article">RÉTROSPECTIVE:<br> En septembre 2019, Bugatti établissait un record de
+                            vitesse
+                            avec le prototype Chiron Super Sport 300+. Cette version allongée de la supercar avait alors
+                            atteint 490,484 km/h aux
+                            mains du pilote Andy Wallace. Le constructeur a ensuite annoncé une version de
+                            (petite) série dotée des mêmes attributs que la voiture du record. Chose promise, chose due
+                            :
+                            Bugatti à présenter la Chiron Super Sport.<br>
+                        </p>
+                        <hr><span class="categorie">
+                            CATÉGORIE: AUTOMOBILE
+                        </span>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

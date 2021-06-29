@@ -1,20 +1,33 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ScienceController!{% endblock %}
+{% block title %} SCIENCE {% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+            {# SCIENCE #}
+            <h3 class="science-titre">CERTAINS DES DINOSAURES AURAIENT VÉCU DURABLEMENT EN ARCTIQUE</h3>
+            <div class="row align-items-center">
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/var/www/html/Projet_PARALLAX/PARALLAX/src/Controller/ScienceController.php'|file_link(0) }}">src/Controller/ScienceController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/var/www/html/Projet_PARALLAX/PARALLAX/templates/science/index.html.twig'|file_link(0) }}">templates/science/index.html.twig</a></code></li>
-    </ul>
-</div>
-{% endblock %}
+                <div class="col-12 col-md-4 offset-md-4 "> <img src="{{ asset('build/images/dinosaure.jpg') }}"
+                        alt="Dinosaure" />
+                        <span class="credit">Crédit: Belgalmage</span>
+                    </div>
+
+                <div class="col-12">
+
+                    <p class="article"> L’information est surprenante mais les dernières recherches et études menées en
+                        Arctique semblent montrer que des dinosaures vivaient il y a quelques milliers d’années dans ces
+                        contrées glacées. Ces animaux gigantesques auraient développé toutes sortes de techniques comme
+                        l’hibernation et des plumes pour faire face au froid, selon une nouvelle étude publiée la
+                        semaine passée dans la revue Current Biology.
+                    </p>
+                </div>
+            </div>
+
+            <div class="date"> Publié le 28/06/2021 à 19h00</div>
+            <hr>
+        </div>
+        {% endblock %}

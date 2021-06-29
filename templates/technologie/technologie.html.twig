@@ -1,20 +1,37 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello TechnologieController!{% endblock %}
+{% block title %} TECHNOLOGIE {% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+            {# TECHNOLOGIE #}
+            <h3 class="technologie-titre">UN HOMME RECOUVRE LA VUE GRACE À UNE CORNÉE ARTIFICIELLE</h3>
+            <div class="row align-items-center">
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/var/www/html/Projet_PARALLAX/PARALLAX/src/Controller/TechnologieController.php'|file_link(0) }}">src/Controller/TechnologieController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/var/www/html/Projet_PARALLAX/PARALLAX/templates/technologie/index.html.twig'|file_link(0) }}">templates/technologie/index.html.twig</a></code></li>
-    </ul>
+                <div class="col-12 col-md-4 offset-md-4 "> <img src="{{ asset('build/images/cornee-artificiel.jpg') }}"
+                        alt="Cornée Artificiel" />
+                        <span class="credit">Crédit: futura-sciences.com</span>
+                    </div>
+
+
+                <div class="col-12">
+
+                    <p class="article"> Dans une opération qui pourrait donner de l'espoir à de nombreuses personnes
+                        malvoyantes, un homme de 78 ans a retrouvé la vue suite à l'implantation d'une cornée
+                        artificielle. Baptisée KPro, elle est l'œuvre de la firme israélienne CorNeat Vision et inventée
+                        par le Dr Gilad Litvin. Elle est rapide à poser, et ne nécessite aucun tissu de donneur. Le
+                        patient a immédiatement retrouvé la vue dès que les bandages ont été retirés, et a pu
+                        reconnaître ses proches et lire des chiffres sur un tableau.
+                    </p>
+                </div>
+            </div>
+
+            <div class="date"> Publié le 28/06/2021 à 19h00</div>
+            <hr>
+        </div>
+    </div>
 </div>
 {% endblock %}

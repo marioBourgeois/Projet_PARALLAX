@@ -1,20 +1,89 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AutomobileController!{% endblock %}
+{% block title %} AUTOMOBILE {% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+            {# TOUTES MARQUES #}
+            <h2 class="automobile">TOUTES MARQUES</h2>
+            <h3 class="automobile-titre">LA BUGATTI CHIRON SUPER SPORT: SEULEMENT 30 EXEMPLAIRES</h3>
+            <div class="row align-items-center">
+                <div class="col-12 col-md-4 offset-md-4">
+                    <img src="{{ asset('build/images/bugatti-chiron.webp') }}" alt="Bugatti Chiron Super Sport" />
+                    <span class="credit">Crédit: Turbo.fr</span>
+                </div>
+                <div class="col-12">
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/var/www/html/Projet_PARALLAX/PARALLAX/src/Controller/AutomobileController.php'|file_link(0) }}">src/Controller/AutomobileController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/var/www/html/Projet_PARALLAX/PARALLAX/templates/automobile/index.html.twig'|file_link(0) }}">templates/automobile/index.html.twig</a></code></li>
-    </ul>
+                    <p class="article">RÉTROSPECTIVE:<br> En septembre 2019, Bugatti établissait un record de vitesse
+                        avec le prototype Chiron Super Sport 300+. Cette version allongée de la supercar avait alors
+                        atteint 490,484 km/h aux
+                        mains du pilote Andy Wallace. Le constructeur a ensuite annoncé une version de
+                        (petite) série dotée des mêmes attributs que la voiture du record. Chose promise, chose due :
+                        Bugatti à présenter la Chiron Super Sport.<br>
+
+
+                        SOUS LE CAPOT:<br>  On retrouve le W16 8L doté de quatre turbocompresseurs
+                        soufflant à 2,8 bars
+                        pour offrir une puissance de 1 600 ch, soit 100 ch de plus que les autres Chiron.
+                        La Chiron Super Sport accélère de 0 à 200 km/h en 5,8 s et atteint les 300 km/h en 12,1 s selon
+                        Bugatti. Contrairement au prototype, la vitesse est limitée électroniquement à 440 km/h.</br>
+
+                        PRIX:<br> Seuls 30 exemplaires doivent être produits et chacun coûte 3,2 millions
+                        d’euros hors taxes et
+                        options. Les clients pourront se consoler un peu en se rappelant que la voiture était
+                        initialement
+                        annoncée pour 3,5 millions d’euros HT. Suite à la pandémie, les livraisons ont été
+                        repoussées de six mois environ. Les premiers propriétaires pourront prendre possession de leur
+                        Chiron Super Sport début 2022.</p>
+                </div>
+
+            </div>
+            <div class="date"> Publié le 28/06/2021 à 17h00</div>
+            <hr>
+
+            <h2 class="automobile">ESPACE MERCEDES</h2>
+            <h3 class="automobile-titre">MERCEDES SE MOQUE OUVERTEMENT DE PORSCHE (AVEC HUMOUR)</h3>
+            <div class="row align-items-center">
+                <div class="col-12 col-md-4 offset-md-4">
+                    <img src="{{ asset('build/images/mercedes-black-series.webp') }}" alt="Mercedes Black Series" />
+                    <span class="credit">Crédit: Turbo.fr</span>
+                </div>
+                <div class="col-12">
+                    <p class="article"> Porsche dévoilait un nouveau tour chrono record de la 911 GT2 RS Manthey Racing
+                        sur la Nordschleife.
+                        Avec sa marque en 6:43:300 sur la version d'homologation des records du Grand Nürburgring
+                        (légèrement différente de celle précédemment utilisée par les constructeurs), elle repasse
+                        devant la
+                        Mercedes-AMG GT Black Series qui possédait le record en 6:48:047.</br>
+
+                        Au sein de la marque à l'étoile, ils ont tenu à féliciter les gens de chez Porsche pour ce
+                        nouveau
+                        record. Mais ils en profitent pour lancer une très belle pique à leurs rivaux du
+                        constructeur de Zuffenhausen : « Bravo Porsche pour ce tour incroyable, même si vous avez eu
+                        besoin
+                        d'un kit de modification additionnel pour battre notre Mercedes AMG GT Black Serie entièrement
+                        de
+                        série ».</br>
+
+                        Mercedes rappelle que Porsche n'a pas réalisé cette performances avec une véritable voiture de
+                        série. Pour rappel, la Porsche GT2 RS Manthey Racing disposant de son nouveau kit spécial est
+                        entièrement réglée pour la Nordschleife. Et la GT2 RS normale n'est plus disponible au catalogue
+                        de
+                        Porsche depuis longtemps.</p>
+                </div>
+
+            </div>
+            <div class="date"> Publié le 28/06/2021 à 16h00</div>
+            <hr>
+
+        </div>
+
+
+
+
+    </div>
 </div>
 {% endblock %}

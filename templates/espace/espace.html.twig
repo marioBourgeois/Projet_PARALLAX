@@ -1,20 +1,34 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello EspaceController!{% endblock %}
+{% block title %} ESPACE {% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+                {# ESPACE #}
+                <h3 class="espace-titre">VIRGIN GALACTIC A OBTENU LA LICENCE POUR ENVOYER DES TOURISTES DANS L'ESPACE</h3>
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-4 offset-md-4">
+                        <img src="{{ asset('build/images/virgin-galactic.jpg') }}" alt="Virgin Galactic" />
+                        <span class="credit">Crédit: SiecleDigital.fr</span>
+                    </div>
+                    
+                    <div class="col-12">
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/var/www/html/Projet_PARALLAX/PARALLAX/src/Controller/EspaceController.php'|file_link(0) }}">src/Controller/EspaceController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/var/www/html/Projet_PARALLAX/PARALLAX/templates/espace/index.html.twig'|file_link(0) }}">templates/espace/index.html.twig</a></code></li>
-    </ul>
-</div>
+                        <p class="article"> Augmentation des actions de l'entreprise de 40% depuis l'annonce.
+                            C’est un nouveau pas vers l’arrivée du tourisme spatial. Virgin Galactic a obtenu le 25 juin, de
+                            l’Administration Fédérale de l’Aviation américaine (FAA), une mise à niveau de sa licence pour
+                            pouvoir envoyer des passagers dans l’espace. L’entreprise disposait depuis 2016 d’une
+                            autorisation à mener des expérimentations, sans passagers.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="date"> Publié le 28/06/2021 à 18h00</div>
+                <hr>
+            </div>
+        </div>
+    </div>
 {% endblock %}
