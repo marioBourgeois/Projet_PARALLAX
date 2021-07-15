@@ -13,7 +13,7 @@ class AproposController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('apropos/index.html.twig', [
+        return $this->render('apropos/apropos.html.twig', [
             'controller_name' => 'AproposController',
         ]);
     }

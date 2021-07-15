@@ -3,26 +3,21 @@
 namespace App\Controller;
 
 use App\Repository\ArticleRepository;
-use App\Repository\MiseEnAvantRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class AutomobileController extends AbstractController
+class WebController extends AbstractController
 {
     /**
-     * @Route("/automobile", name="automobile")
+     * @Route("/web", name="web")
      */
-
     public function index(ArticleRepository $articleRepo): Response
     {
-        $articles = $articleRepo->findByIdMiseEnAvant(null);
-        $misesenavant = $articleRepo->findByIdMiseEnAvant(1);
+        $articles = $articleRepo->findAll();
 
-        return $this->render('automobile/automobile.html.twig', [
+        return $this->render('web/web.html.twig', [
             'articles' => $articles,
-            'misesenavant' => $misesenavant,
         ]);
     }
 }
-
