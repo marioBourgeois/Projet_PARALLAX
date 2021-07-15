@@ -3,5 +3,32 @@
 {% block title %} À PROPOS {% endblock %}
 
 {% block body %}
-azerty
-{% endblock %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10 offset-md-1 ">
+
+            {# À PROPOS #}
+            <h3 class="apropos-titre">PROJECT_PARALLAX</h3>
+            <div class="row align-items-center">
+
+                <div class="col-12 col-md-8 offset-md-2 "> <img src="{{ asset('build/images/parallax1.jpg') }}"
+                        alt="Logo PARALLAX" />
+                    <span class="credit">Crédit: C£L</span>
+                </div>
+
+
+                <div class="col-12">
+
+                    <p class="article-apropos"> Projet créer dans le cadre de ma formation en développent web et web
+                        mobile comme projet final.
+                        </br>
+                        PARALLAX est un blog actu ou je partage et parle de l'actualité des sujets qui m'intéresse et de
+                        mes centres d'intéret et peut-être d'autres choses.</p>
+
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    {% endblock %}

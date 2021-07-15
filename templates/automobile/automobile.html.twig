@@ -3,87 +3,78 @@
 {% block title %} AUTOMOBILE {% endblock %}
 
 {% block body %}
+
+{% include "base/navautomobile.html.twig" %}
+
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12">
+        <div class="col-md-10 offset-md-1">
 
-            {# TOUTES MARQUES #}
-            <h2 class="automobile">TOUTES MARQUES</h2>
-            <h3 class="automobile-titre">LA BUGATTI CHIRON SUPER SPORT: SEULEMENT 30 EXEMPLAIRES</h3>
-            <div class="row align-items-center">
-                <div class="col-12 col-md-4 offset-md-4">
-                    <img src="{{ asset('build/images/bugatti-chiron.webp') }}" alt="Bugatti Chiron Super Sport" />
-                    <span class="credit">Crédit: Turbo.fr</span>
-                </div>
-                <div class="col-12">
+            <div id="toutes-marques">
+                <h2 class="automobile">TOUTES MARQUES</h2>
+                {% for article in articles %}
+                {# TOUTES MARQUES #}
+                <h3 class="automobile-titre">{{ article.titre }}</h3>
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-6 offset-md-3">
+                        <img src="{{asset(article.image) }}" alt="{{ article.imagealt }}" />
+                        <span class="credit">Crédit:{{ article.credit }}</span>
+                    </div>
+                    <div class="col-12">
 
-                    <p class="article">RÉTROSPECTIVE:<br> En septembre 2019, Bugatti établissait un record de vitesse
-                        avec le prototype Chiron Super Sport 300+. Cette version allongée de la supercar avait alors
-                        atteint 490,484 km/h aux
-                        mains du pilote Andy Wallace. Le constructeur a ensuite annoncé une version de
-                        (petite) série dotée des mêmes attributs que la voiture du record. Chose promise, chose due :
-                        Bugatti à présenter la Chiron Super Sport.<br>
+                        <p class="article">{{ article.contenu }}</p>
+                    </div>
 
-
-                        SOUS LE CAPOT:<br>  On retrouve le W16 8L doté de quatre turbocompresseurs
-                        soufflant à 2,8 bars
-                        pour offrir une puissance de 1 600 ch, soit 100 ch de plus que les autres Chiron.
-                        La Chiron Super Sport accélère de 0 à 200 km/h en 5,8 s et atteint les 300 km/h en 12,1 s selon
-                        Bugatti. Contrairement au prototype, la vitesse est limitée électroniquement à 440 km/h.</br>
-
-                        PRIX:<br> Seuls 30 exemplaires doivent être produits et chacun coûte 3,2 millions
-                        d’euros hors taxes et
-                        options. Les clients pourront se consoler un peu en se rappelant que la voiture était
-                        initialement
-                        annoncée pour 3,5 millions d’euros HT. Suite à la pandémie, les livraisons ont été
-                        repoussées de six mois environ. Les premiers propriétaires pourront prendre possession de leur
-                        Chiron Super Sport début 2022.</p>
                 </div>
 
+                <span class="date heure-date">
+
+                </span>
+
+                <div class="date"> <img class="horloge" src="{{ asset('build/images/clock.svg') }}" /> Publié le: {{
+                    article.datepublication|date("d/m/Y") }}
+                    à {{ article.datemodification|date("H:i") }}</div>
+
+                <hr>
             </div>
-            <div class="date"> Publié le 28/06/2021 à 17h00</div>
-            <hr>
 
-            <h2 class="automobile">ESPACE MERCEDES</h2>
-            <h3 class="automobile-titre">MERCEDES SE MOQUE OUVERTEMENT DE PORSCHE (AVEC HUMOUR)</h3>
-            <div class="row align-items-center">
-                <div class="col-12 col-md-4 offset-md-4">
-                    <img src="{{ asset('build/images/mercedes-black-series.webp') }}" alt="Mercedes Black Series" />
-                    <span class="credit">Crédit: Turbo.fr</span>
-                </div>
-                <div class="col-12">
-                    <p class="article"> Porsche dévoilait un nouveau tour chrono record de la 911 GT2 RS Manthey Racing
-                        sur la Nordschleife.
-                        Avec sa marque en 6:43:300 sur la version d'homologation des records du Grand Nürburgring
-                        (légèrement différente de celle précédemment utilisée par les constructeurs), elle repasse
-                        devant la
-                        Mercedes-AMG GT Black Series qui possédait le record en 6:48:047.</br>
+            {% endfor %}
 
-                        Au sein de la marque à l'étoile, ils ont tenu à féliciter les gens de chez Porsche pour ce
-                        nouveau
-                        record. Mais ils en profitent pour lancer une très belle pique à leurs rivaux du
-                        constructeur de Zuffenhausen : « Bravo Porsche pour ce tour incroyable, même si vous avez eu
-                        besoin
-                        d'un kit de modification additionnel pour battre notre Mercedes AMG GT Black Serie entièrement
-                        de
-                        série ».</br>
 
-                        Mercedes rappelle que Porsche n'a pas réalisé cette performances avec une véritable voiture de
-                        série. Pour rappel, la Porsche GT2 RS Manthey Racing disposant de son nouveau kit spécial est
-                        entièrement réglée pour la Nordschleife. Et la GT2 RS normale n'est plus disponible au catalogue
-                        de
-                        Porsche depuis longtemps.</p>
+            {% for article in misesenavant %}
+            {# ESPACE MERCEDES #}
+            <div id="espace-mercedes">
+                <h2 class="automobile">ESPACE MERCEDES</h2>
+                <h3 class="automobile-titre">{{ article.titre }}</h3>
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-6 offset-md-3">
+                        <img src="{{asset(article.image) }}" alt="{{ article.imagealt }}" />
+                        <span class="credit">Crédit:{{ article.credit }}</span>
+                    </div>
+                    <div class="col-12">
+
+                        <p class="article">{{ article.contenu }}</p>
+                    </div>
+
                 </div>
 
+                <span class="date heure-date">
+
+                </span>
+
+                <div class="date"> <img class="horloge" src="{{ asset('build/images/clock.svg') }}" /> Publié le: {{
+                    article.datepublication|date("d/m/Y") }}
+                    à {{ article.datemodification|date("H:i") }}</div>
+
+                <hr>
             </div>
-            <div class="date"> Publié le 28/06/2021 à 16h00</div>
-            <hr>
+
+            {% endfor %}
 
         </div>
 
-
-
-
     </div>
 </div>
+
+
 {% endblock %}

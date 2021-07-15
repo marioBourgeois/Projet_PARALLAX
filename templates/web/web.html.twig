@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello WebController!{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+
+            {# WEB #}
+            <h3 class="web-titre">GITHUB COPILOT: UNE IA GÉNÉRATEUR DE LIGNES DE CODES</h3>
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6 offset-md-3">
+                    <img src="{{ asset('build/images/github-copilot.png') }}" alt="Github Copilot" />
+                    <span class="credit">Crédit: Silicon.fr</span>
+                </div>
+
+                <div class="col-12">
+
+                    <p class="article"> L'intelligence artificielle: Github Copilot est un outil permettant d'améliorer
+                        la productivité et de faciliter le travail. Cette IA est capable de créer des lignes de codes
+                        mais également de proposer des fonctions.
+
+                        Le fonctionnement est le suivant: lorsque vous écrivez du code, Github Copilot propose une suite
+                        logique en suggérant du code au fur et à mesure que vous codez, vous pourrez accepter ou refuser
+                        les suggestions.
+
+                        C'est une IA qui peut-etre très utile si vous commencez un nouveau langage ou si vous travaillez
+                        sur un nouveau framework.
+
+                        Github Copilot, s'intègre directement dans Visual Studio Code, s'adaptera à votre comportement
+                        en fonction de de votre utilisation; si vous rejetez de nombreuses suggestions, l'intelligence
+                        artificielle le prendra en compte pour éviter de refaire les mêmes erreurs.
+
+                        L'IA fonctionne actuellement avec Python, Javascript, Typescript, Ruby et Go. </p>
+                </div>
+            </div>
+
+            <div class="date"> Publié le 01/07/2021 à 09h00</div>
+            <hr>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
