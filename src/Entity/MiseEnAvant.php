@@ -51,6 +51,13 @@ class MiseEnAvant
         return $this;
     }
 
+    public function __toString(): string
+    {
+        return $this->nom;
+    }
+
+
+
     /**
      * @return Collection|article[]
      */
@@ -79,5 +86,8 @@ class MiseEnAvant
         }
 
         return $this;
+        
     }
+
+    
 }

@@ -52,6 +52,12 @@ class Categorie
         return $this;
     }
 
+    public function __toString(): string
+    {
+        return $this->nom;
+    }
+
+
     /**
      * @return Collection|Article[]
      */
@@ -78,4 +84,7 @@ class Categorie
 
         return $this;
     }
+
+   
 }
+
