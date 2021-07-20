@@ -3,33 +3,72 @@
 {% block title %} ESPACE {% endblock %}
 
 {% block body %}
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-10 offset-md-1">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+
+        
+                {% for article in articles %}
 
                 {# ESPACE #}
-                <h3 class="espace-titre">VIRGIN GALACTIC A OBTENU LA LICENCE POUR ENVOYER DES TOURISTES DANS L'ESPACE</h3>
+                <h3 class="espace-titre">{{ article.titre }}</h3>
                 <div class="row align-items-center">
                     <div class="col-12 col-md-6 offset-md-3">
-                        <img src="{{ asset('build/images/virgin-galactic.jpg') }}" alt="Virgin Galactic" />
-                        <span class="credit">Crédit: SiecleDigital.fr</span>
+                        <img src="{{asset(article.image) }}" alt="{{ article.imagealt }}" />
+                        <span class="credit">Crédit:{{ article.credit }}</span>
                     </div>
-                    
+
                     <div class="col-12">
 
-                        <p class="article"> Augmentation des actions de l'entreprise de 40% depuis l'annonce.
-                            C’est un nouveau pas vers l’arrivée du tourisme spatial. Virgin Galactic a obtenu le 25 juin, de
-                            l’Administration Fédérale de l’Aviation américaine (FAA), une mise à niveau de sa licence pour
-                            pouvoir envoyer des passagers dans l’espace. L’entreprise disposait depuis 2016 d’une
-                            autorisation à mener des expérimentations, sans passagers.
+                        <p class="article"> {{ article.contenu }}
                         </p>
                     </div>
                 </div>
 
-                <div class="date"> Publié le 28/06/2021 à 18h00</div>
+                <div class="date"> <img class="horloge" src="{{ asset('build/images/clock.svg') }}" /> Publié le: {{
+                    article.datepublication|date("d/m/Y") }}
+                    à {{ article.datemodification|date("H:i") }}</div>
                 <hr>
-               
+            </div>
+
+        </div>
+        {% endfor %}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+        {# ESPACE #}
+        <h3 class="espace-titre">VIRGIN GALACTIC A OBTENU LA LICENCE POUR ENVOYER DES TOURISTES DANS L'ESPACE</h3>
+        <div class="row align-items-center">
+            <div class="col-12 col-md-6 offset-md-3">
+                <img src="{{ asset('build/images/virgin-galactic.jpg') }}" alt="Virgin Galactic" />
+                <span class="credit">Crédit: SiecleDigital.fr</span>
+            </div>
+
+            <div class="col-12">
+
+                <p class="article"> Augmentation des actions de l'entreprise de 40% depuis l'annonce.
+                    C’est un nouveau pas vers l’arrivée du tourisme spatial. Virgin Galactic a obtenu le 25 juin, de
+                    l’Administration Fédérale de l’Aviation américaine (FAA), une mise à niveau de sa licence pour
+                    pouvoir envoyer des passagers dans l’espace. L’entreprise disposait depuis 2016 d’une
+                    autorisation à mener des expérimentations, sans passagers.
+                </p>
             </div>
         </div>
+
+        <div class="date"> Publié le 28/06/2021 à 18h00</div>
+        <hr>
+
     </div>
+</div>
+</div>
 {% endblock %}
