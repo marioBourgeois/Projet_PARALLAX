@@ -9,9 +9,14 @@
 html,
 body {
   background-color: #9c968b;
+  height: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
 }
 
 img {
@@ -35,8 +40,9 @@ h2 {
 h3 {
   padding-top: 10px;
   padding-top: 3px;
+  padding: 5px;
   padding-bottom: 3px;
-  background-color:#292929;
+  background-color: #292929;
   color: white;
 }
 
@@ -50,6 +56,7 @@ li {
 
 a {
   color: #000000;
+  text-decoration: none;
 }
 
 a:hover {
@@ -60,8 +67,8 @@ hr {
   color: #000000;
 }
 
-.container-fluid {
-  margin-bottom: 10px;
+.align-items-center {
+  padding: 15px;
 }
 
 /* FIN GLOBAL */
@@ -71,7 +78,7 @@ hr {
 .logo {
   height: 60px;
   padding-left: 10px;
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .nav-link {
@@ -80,6 +87,9 @@ hr {
 
 .navbar-light .navbar-nav .nav-link {
   color: rgb(0, 0, 0);
+  font-size: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 /* FIN NAVBAR */
@@ -88,9 +98,8 @@ hr {
 
 footer {
   background-color: #f8f9fa !important;
-  margin: 0;
-  width: 100%;
-  margin: 0 auto;
+  position: relative;
+  padding-bottom: 5px;
 }
 
 .logo2 {
@@ -130,7 +139,7 @@ footer {
 
 .date {
   float: right;
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 
 .categorie {
@@ -138,15 +147,35 @@ footer {
   margin-right: 10px;
 }
 
-.credit {font-size: 0.8em;
+.credit {
+  font-size: 0.8em;
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+.horloge {
+  height: 22px;
 }
 
 /* FIN PAGE ACTUALITE */
 
+/* PAGE WEB */
+
+.web-titre {
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-top: 3px;
+  padding: 5px;
+  padding-bottom: 3px;
+  background-color: #003eff;
+  color: white;
+}
+
+/* FIN PAGE WEB */
+
 /* PAGE AUTOMOBILE */
 
-.automobile { margin-top: 10px;
+.automobile {
+  margin-top: 10px;
   padding-top: 3px;
   padding-bottom: 3px;
   background-color: #9c0505;
@@ -159,13 +188,36 @@ footer {
 .automobile-titre {
   padding-top: 10px;
   padding-top: 3px;
+  padding: 5px;
   padding-bottom: 3px;
   background-color: #9c0505;
   color: white;
 }
 
-.article{
+.article {
   font-size: 1em;
+}
+
+.nav-automobile {
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1.25em;
+}
+
+.categorie-automobile {
+  background-color: #9c0505;
+  color: white;
+  text-decoration: none;
+  border-style: solid;
+  border-color: white;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.categorie-automobile:hover {
+  color: #000000;
 }
 /* FIN PAGE AUTOMOBILE */
 
@@ -174,9 +226,10 @@ footer {
 .espace-titre {
   margin-top: 10px;
   padding-top: 10px;
+  padding: 5px;
   padding-top: 3px;
   padding-bottom: 3px;
-  background-color: #0143da;
+  background-color: #000080;
   color: white;
 }
 
@@ -187,9 +240,10 @@ footer {
 .science-titre {
   margin-top: 10px;
   padding-top: 10px;
+  padding: 5px;
   padding-top: 3px;
   padding-bottom: 3px;
-  background-color:#08b138;
+  background-color: #08b138;
   color: white;
 }
 
@@ -200,10 +254,93 @@ footer {
 .technologie-titre {
   margin-top: 10px;
   padding-top: 10px;
+  padding: 5px;
   padding-top: 3px;
   padding-bottom: 3px;
-  background-color:#e6770f;
+  background-color: #e6770f;
   color: white;
 }
 
 /* FIN PAGE TECHNOLOGIE */
+
+/* PAGE À PROPOS */
+
+.apropos-titre {
+  margin-top: 10px;
+  padding-top: 10px;
+  padding: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color: #292929;
+  color: white;
+}
+
+.article-apropos {
+  font-size: 1em;
+  margin-top: 20px;
+}
+
+/* FIN PAGE À PROPOS */
+
+/* PARTIE ADMINISTRATEUR */
+
+.admin {
+  margin-bottom: 20px;
+}
+
+.admin-icon {
+  width: 100px;
+  height: 150px;
+
+  margin: 10px;
+
+  background-color:rgba(#0143da, 0.5);
+
+  border-style: solid;
+  border-color:  #f8f9fa;
+  border-radius: 10px;
+
+  display: inline-table;
+}
+
+.admin-icon > svg {
+  width: 100%;
+  height: 100%;
+}
+
+.admin-icon-text-articles-categories {
+  background-color: rgba(#0143da, 0.5);
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 15px;
+  margin: 20px;
+  border-style: solid;
+  border-color:  #f8f9fa;
+  
+  display: block;
+}
+
+
+.admin-icon-text {
+  background-color: rgba(#0143da, 0.5);
+  color: white;
+  padding: 10px;
+  font-size: 10px;
+  margin: 10px;
+  border-style: solid;
+  border-top: medium;
+  border-color:  #f8f9fa;
+  border-radius: 10px;
+}
+
+
+
+
+
+.form-check .form-check-input {
+  float: none;
+  margin-left: -1.5em;
+}
+
+

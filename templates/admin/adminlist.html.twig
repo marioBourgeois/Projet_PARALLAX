@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} ADMINISTRATION - LISTES D'ARTICLES {% endblock %}
+
+{% block body %}
+
+
+<div class="container-fluid">
+    <div class="admin">
+        <div class="row">
+            <div class="col-12 col-md-8 offset-md-2">
+            {% for article in articles %}
+
+            <li class="color"><a href="{{ path('admin_article_edit', {'id' : article.id }) }}">
+                    {{ article.titre}} </a></li>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
