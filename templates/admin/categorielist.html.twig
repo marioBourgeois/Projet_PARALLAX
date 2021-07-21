@@ -9,15 +9,15 @@
     <div class="admin">
         <div class="row">
             <div class="col-12 col-md-8 offset-md-2">
-            {% for article in articles %}
+            {% for categorie in categories %}
 
-            <li class="color"><a href="{{ path('admin_categorie_edit', {'id' : article.id }) }}">
-                    {{ article.titre}} </a></li>
+            <li class="color"><a href="{{path('admin_categorie_edit', {'id': categorie.id }) }}">
+                    {{ categorie.nom}} </a></li>
                 </div>
             {% endfor %}
         </div>
-    </div>
+    
 </div>
-
+</div>
 
 {% endblock %}

@@ -5,7 +5,10 @@ namespace App\Controller;
 use DateTime;
 use App\Entity\Article;
 use App\Form\ArticleType;
+use App\Entity\Categorie;
+use App\Form\CategorieType;
 use App\Repository\ArticleRepository;
+use App\Repository\CategorieRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -84,11 +87,11 @@ class AdminController extends AbstractController
     /**
      * @Route("/admin/categories", name="admin_categorie_list")
      */
-    public function categorielist(ArticleRepository $articleRepo): Response
+    public function categorielist(CategorieRepository $categorieRepo): Response
     {
-        $articles = $articleRepo->findAll();
+        $categories = $categorieRepo->findAll();
         return $this->render('admin/categorielist.html.twig', [
-            'articles' => $articles,
+            'categories' => $categories,
         ]);
     }
 
@@ -96,23 +99,23 @@ class AdminController extends AbstractController
      * @Route("/admin/categorie", name="admin_categorie_new")
      * @Route("/admin/categorie/{id}", name="admin_categorie_edit")
      */
-    public function categorieedit(Article $article = null, Request $request): Response
+    public function categorieedit(Categorie $categorie = null, Request $request): Response
     {
-        if ($article == null) $article = new Article();
-        $form = $this->createForm(ArticleType::class, $article);
+        if ($categorie == null) $categorie = new Categorie();
+        $form = $this->createForm(CategorieType::class, $categorie);
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
 
             if ($form->get('Enregistrer')->isClicked()) {
-               $article->setDatePublication(new DateTime());
-                $this->entityManager->persist($article);
+                $categorie->setDatePublication(new DateTime());
+                $this->entityManager->persist($categorie);
                 $this->entityManager->flush();
-                return $this->redirectToRoute('admin_categorie_edit', ['id' => $article->getId()]);
+                return $this->redirectToRoute('admin_categorie_edit', ['id' => $categorie->getId()]);
             }
 
             if ($form->get('Supprimer')->isClicked()) {
-                $this->entityManager->remove($article);
+                $this->entityManager->remove($categorie);
                 $this->entityManager->flush();
                 return $this->redirectToRoute('admin_categorie_list');
             }
