@@ -3,6 +3,9 @@
   <a class="navbar-brand" href="{{ path('home') }}">
     <img class="nav-item nav-link logo" src="{{ asset('build/images/parallax.png') }}">
   </a>
+  
+ <div class="container-fluid">
+    <div class="col-12">
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
     aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,6 +43,28 @@
       <li class="nav-item">
         <a class="nav-link" href="{{ path('apropos') }}">À PROPOS</a>
       </li>
+
+     
+        
+      {% if app.user %}
+      <li class="nav-item dropdown">
+
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          {{ app.user.username}}
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{{ path('home') }}">Administration</a>
+          <a class="dropdown-item" href="{{ path('app_logout') }}">Déconnexion</a>
+        </div>
+
+      </li>
+
+      {% endif %}
+    </div>
+  </div>
+
 
     </ul>
 

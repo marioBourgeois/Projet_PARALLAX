@@ -21,7 +21,8 @@ class ArticleType extends AbstractType
             ->add('titre', TextType::class)
             ->add('slug')
             ->add('image', FileType::class, [
-                'label' => 'Image'
+                'label' => 'Image',
+                'data_class' => null
             ])
             ->add('image_alt')
             ->add('contenu', CKEditorType::class) // Ce champ sera remplacé par un éditeur WYSIWIG

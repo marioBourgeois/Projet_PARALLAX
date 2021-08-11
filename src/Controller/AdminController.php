@@ -27,13 +27,12 @@ class AdminController extends AbstractController
     /* ADMIN PAGE */
 
     /**
-     * @Route("/admin", name="admin_article")
+     * @Route("/admin", name="admin_home")
      */
     public function admin(ArticleRepository $articleRepo): Response
     {
-        $articles = $articleRepo->findAll();
         return $this->render('admin/admin.html.twig', [
-            'articles' => $articles,
+            
         ]);
     }
 
@@ -56,8 +55,11 @@ class AdminController extends AbstractController
      */
     public function adminedit(Int $id = null, Article $article = null, Request $request): Response
     {
-        if ($article){
-            $article = new Article();}
+        if (!$article) {
+        // au lieu de 
+        // if ($article){
+            $article = new Article();
+        }
         $form = $this->createForm(ArticleType::class,$article);
 
         $form->handleRequest($request);
@@ -67,7 +69,7 @@ class AdminController extends AbstractController
                $article->setDatePublication(new DateTime());
                 $this->entityManager->persist($article);
                 $this->entityManager->flush();
-                return $this->redirectToRoute('admin_article_edit', ['slug' => $article->getId()]);
+                return $this->redirectToRoute('admin_article_edit', ['id' => $article->getId()]);
             }
 
             if ($form->get('Supprimer')->isClicked()) {
